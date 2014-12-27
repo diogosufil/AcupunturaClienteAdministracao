@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace ClienteAdministracao
 {
-    public partial class Form2 : Form
+    public partial class FormMain : Form
     {
         private String token;
-        public Form2()
+        public FormMain()
         {
             InitializeComponent();
             token = ClienteAdministracao.Properties.Settings.Default.token;

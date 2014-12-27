@@ -29,11 +29,18 @@ namespace ClienteAdministracao
             //Botão Login
             username = textBoxUsername.Text;
             password = textBoxPassword.Text;
-            String token = servico.logIn(username, password);
-            ClienteAdministracao.Properties.Settings.Default.token = token;
-            ClienteAdministracao.Properties.Settings.Default.Save();
-            Form2 f = new Form2();
-            f.Show();
+            try
+            {
+                String token = servico.logIn(username, password);
+                ClienteAdministracao.Properties.Settings.Default.token = token;
+                ClienteAdministracao.Properties.Settings.Default.Save();
+                FormMain f = new FormMain();
+                f.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error!\n" + ex.Message);
+            }
         }
     }
 }

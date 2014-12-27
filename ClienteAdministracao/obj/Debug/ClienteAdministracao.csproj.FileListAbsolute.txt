@@ -8,3 +8,13 @@ E:\Diogo\Faculdade\I.S\AcupunturaWebService\ClienteAdministracao\ClienteAdminist
 E:\Diogo\Faculdade\I.S\AcupunturaWebService\ClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.exe
 E:\Diogo\Faculdade\I.S\AcupunturaWebService\ClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.pdb
 E:\Diogo\Faculdade\I.S\AcupunturaWebService\ClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.Form2.resources
+E:\Diogo\Faculdade\I.S\AcupunturaClienteAdministracao\ClienteAdministracao\bin\Debug\ClienteAdministracao.exe.config
+E:\Diogo\Faculdade\I.S\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.exe
+E:\Diogo\Faculdade\I.S\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.pdb
+E:\Diogo\Faculdade\I.S\AcupunturaClienteAdministracao\ClienteAdministracao\bin\Debug\ClienteAdministracao.exe
+E:\Diogo\Faculdade\I.S\AcupunturaClienteAdministracao\ClienteAdministracao\bin\Debug\ClienteAdministracao.pdb
+E:\Diogo\Faculdade\I.S\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.csprojResolveAssemblyReference.cache
+E:\Diogo\Faculdade\I.S\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.Form1.resources
+E:\Diogo\Faculdade\I.S\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.FormMain.resources
+E:\Diogo\Faculdade\I.S\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.Properties.Resources.resources
+E:\Diogo\Faculdade\I.S\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.csproj.GenerateResource.Cache
