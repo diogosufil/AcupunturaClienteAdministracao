@@ -1,0 +1,7 @@
+E:\Diogo\Faculdade\I.S\_Projeto\Etapa 2\Source Control\AcupunturaClienteAdministracao\AcupunturaExcel\bin\Debug\AcupunturaExcel.dll
+E:\Diogo\Faculdade\I.S\_Projeto\Etapa 2\Source Control\AcupunturaClienteAdministracao\AcupunturaExcel\bin\Debug\AcupunturaExcel.pdb
+E:\Diogo\Faculdade\I.S\_Projeto\Etapa 2\Source Control\AcupunturaClienteAdministracao\AcupunturaExcel\bin\Debug\DomainModel.dll
+E:\Diogo\Faculdade\I.S\_Projeto\Etapa 2\Source Control\AcupunturaClienteAdministracao\AcupunturaExcel\bin\Debug\DomainModel.pdb
+E:\Diogo\Faculdade\I.S\_Projeto\Etapa 2\Source Control\AcupunturaClienteAdministracao\AcupunturaExcel\obj\Debug\AcupunturaExcel.csprojResolveAssemblyReference.cache
+E:\Diogo\Faculdade\I.S\_Projeto\Etapa 2\Source Control\AcupunturaClienteAdministracao\AcupunturaExcel\obj\Debug\AcupunturaExcel.dll
+E:\Diogo\Faculdade\I.S\_Projeto\Etapa 2\Source Control\AcupunturaClienteAdministracao\AcupunturaExcel\obj\Debug\AcupunturaExcel.pdb

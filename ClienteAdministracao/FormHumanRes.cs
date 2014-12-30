@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace ClienteAdministracao
 {
-    public partial class FormMain : Form
+    public partial class FormHumanRes : Form
     {
-        private String token;
-        public FormMain()
+        public FormHumanRes()
         {
             InitializeComponent();
-            token = ClienteAdministracao.Properties.Settings.Default.token;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(token);
         }
     }
 }

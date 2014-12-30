@@ -1,0 +1,4 @@
+E:\Diogo\Faculdade\I.S\_Projeto\Etapa 2\Source Control\AcupunturaClienteAdministracao\DomainModel\bin\Debug\DomainModel.dll
+E:\Diogo\Faculdade\I.S\_Projeto\Etapa 2\Source Control\AcupunturaClienteAdministracao\DomainModel\bin\Debug\DomainModel.pdb
+E:\Diogo\Faculdade\I.S\_Projeto\Etapa 2\Source Control\AcupunturaClienteAdministracao\DomainModel\obj\Debug\DomainModel.dll
+E:\Diogo\Faculdade\I.S\_Projeto\Etapa 2\Source Control\AcupunturaClienteAdministracao\DomainModel\obj\Debug\DomainModel.pdb

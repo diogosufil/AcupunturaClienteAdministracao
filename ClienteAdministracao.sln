@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClienteAdministracao", "ClienteAdministracao\ClienteAdministracao.csproj", "{14279FA7-AE81-4E21-9A3D-4BC52D0219D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcupunturaExcel", "AcupunturaExcel\AcupunturaExcel.csproj", "{A3EF7E6A-1065-4502-AF0B-8338DB606364}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainModel", "DomainModel\DomainModel.csproj", "{E4D643D8-5482-49E9-9411-0AE09D62A18B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{14279FA7-AE81-4E21-9A3D-4BC52D0219D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14279FA7-AE81-4E21-9A3D-4BC52D0219D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14279FA7-AE81-4E21-9A3D-4BC52D0219D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3EF7E6A-1065-4502-AF0B-8338DB606364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3EF7E6A-1065-4502-AF0B-8338DB606364}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3EF7E6A-1065-4502-AF0B-8338DB606364}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3EF7E6A-1065-4502-AF0B-8338DB606364}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4D643D8-5482-49E9-9411-0AE09D62A18B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4D643D8-5482-49E9-9411-0AE09D62A18B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4D643D8-5482-49E9-9411-0AE09D62A18B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4D643D8-5482-49E9-9411-0AE09D62A18B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

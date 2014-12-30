@@ -1,6 +1,6 @@
 ﻿namespace ClienteAdministracao
 {
-    partial class FormMain
+    partial class FormHumanRes
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHumanRes));
             this.SuspendLayout();
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(99, 79);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 58);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Show my token";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // FormMain
+            // FormHumanRes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 253);
-            this.Controls.Add(this.button1);
-            this.Name = "FormMain";
+            this.ClientSize = new System.Drawing.Size(443, 299);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FormHumanRes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main";
+            this.Text = "Human Resources";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
     }
 }
