@@ -37,6 +37,12 @@
   <wsdl:message name="IService1_getAllUtilizadores_OutputMessage">
     <wsdl:part name="parameters" element="tns:getAllUtilizadoresResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_writeToXml_InputMessage">
+    <wsdl:part name="parameters" element="tns:writeToXml" />
+  </wsdl:message>
+  <wsdl:message name="IService1_writeToXml_OutputMessage">
+    <wsdl:part name="parameters" element="tns:writeToXmlResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="logIn">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/logIn" message="tns:IService1_logIn_InputMessage" />
@@ -57,6 +63,10 @@
     <wsdl:operation name="getAllUtilizadores">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/getAllUtilizadores" message="tns:IService1_getAllUtilizadores_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/getAllUtilizadoresResponse" message="tns:IService1_getAllUtilizadores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="writeToXml">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/writeToXml" message="tns:IService1_writeToXml_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/writeToXmlResponse" message="tns:IService1_writeToXml_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -99,6 +109,15 @@
     </wsdl:operation>
     <wsdl:operation name="getAllUtilizadores">
       <soap:operation soapAction="http://tempuri.org/IService1/getAllUtilizadores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="writeToXml">
+      <soap:operation soapAction="http://tempuri.org/IService1/writeToXml" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

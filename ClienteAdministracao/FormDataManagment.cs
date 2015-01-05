@@ -18,6 +18,8 @@ namespace ClienteAdministracao
     {
         OpenFileDialog openExcel = new OpenFileDialog();
         ServiceReferenceAcupuntura.Service1Client servico;
+        List<DomainModel.Sintoma> listaSintomas = new List<DomainModel.Sintoma>();
+        List<DomainModel.Diagnostico> listaDiagnosticos = new List<DomainModel.Diagnostico>();
 
         public FormDataManagment()
         {
@@ -60,8 +62,8 @@ namespace ClienteAdministracao
                 if (!txtAbrirExcel.Text.Equals(""))
                 {
                     labelProgress.Show();
-                    List<Sintoma> listaSintomas = ExcelHandler.readSintomasFromExcel(openExcel.FileName);
-                    List<Diagnostico> listaDiagnosticos = ExcelHandler.readDiagnosticosFromExcel(openExcel.FileName);
+                    listaSintomas = ExcelHandler.readSintomasFromExcel(openExcel.FileName);
+                    listaDiagnosticos = ExcelHandler.readDiagnosticosFromExcel(openExcel.FileName);
                     String leituraSintomas = "";
                     String leituraDiagnosticos = "";
 
@@ -69,7 +71,7 @@ namespace ClienteAdministracao
                     {
                         leituraSintomas += s.getNome + Environment.NewLine;
                     }
-                    foreach (Diagnostico d in listaDiagnosticos)
+                    foreach (DomainModel.Diagnostico d in listaDiagnosticos)
                     {
                         leituraDiagnosticos += d.getNome + " -> " + d.getDescricao + Environment.NewLine;
                     }
@@ -99,8 +101,37 @@ namespace ClienteAdministracao
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
+                string token = ClienteAdministracao.Properties.Settings.Default.token;
 
-                //servico.writeToXmlFile(listaSintomas, listaDiagnosticos);
+                List<SintomaWEB> listaS = new List<SintomaWEB>();
+                List<DiagnosticoWEB> listaD = new List<DiagnosticoWEB>();
+
+                foreach (DomainModel.Sintoma s in listaSintomas)
+                {
+                    SintomaWEB sin = new SintomaWEB();
+                    sin.nome = s.getNome;
+                    listaS.Add(sin);
+                }
+
+                foreach (DomainModel.Diagnostico d in listaDiagnosticos)
+                {
+                    DiagnosticoWEB diag = new DiagnosticoWEB();
+                    diag.orgao = d.getOrgao;
+                    diag.descricao = d.getDescricao;
+                    diag.nome = d.getNome;
+                    diag.tratamento = d.getTratamento;
+                    List<SintomaWEB> listaSintWeb = new List<SintomaWEB>();
+                    foreach (DomainModel.Sintoma sin in d.getListaSintomas)
+                    {
+                        SintomaWEB sint = new SintomaWEB();
+                        sint.nome = sin.getNome;
+                        listaSintWeb.Add(sint);
+                    }
+                    diag.listaSintomas = listaSintWeb.ToArray();
+                    listaD.Add(diag);
+                }
+
+                servico.writeToXml(token, listaS.ToArray(), listaD.ToArray());
 
                 labelProgress.Text = Path.GetFileName(openExcel.FileName) + " Imported!";
                 MessageBox.Show("Data successfully imported!\nXML file successfully generated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

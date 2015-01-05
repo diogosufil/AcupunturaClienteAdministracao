@@ -70,4 +70,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="writeToXml">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/AcupunturaWebService" minOccurs="0" name="listaSintomas" nillable="true" type="q2:ArrayOfSintomaWEB" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/AcupunturaWebService" minOccurs="0" name="listaDiagnosticos" nillable="true" type="q3:ArrayOfDiagnosticoWEB" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="writeToXmlResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
