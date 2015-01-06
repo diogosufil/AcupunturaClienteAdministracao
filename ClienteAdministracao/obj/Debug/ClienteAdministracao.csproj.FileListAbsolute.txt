@@ -34,3 +34,22 @@ E:\Diogo\Faculdade\I.S\_Projeto\Etapa 2\Source Control\AcupunturaClienteAdminist
 E:\Diogo\Faculdade\I.S\_Projeto\Etapa 2\Source Control\AcupunturaClienteAdministracao\ClienteAdministracao\bin\Debug\AcupunturaExcel.pdb
 E:\Diogo\Faculdade\I.S\_Projeto\Etapa 2\Source Control\AcupunturaClienteAdministracao\ClienteAdministracao\bin\Debug\DomainModel.pdb
 E:\Diogo\Faculdade\I.S\_Projeto\Etapa 2\Source Control\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.FormLogin.resources
+C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\ClienteAdministracao\bin\Debug\ClienteAdministracao.exe.config
+C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.exe
+C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.pdb
+C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\ClienteAdministracao\bin\Debug\ClienteAdministracao.exe
+C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\ClienteAdministracao\bin\Debug\ClienteAdministracao.pdb
+C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\ClienteAdministracao\bin\Debug\AcupunturaExcel.dll
+C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\ClienteAdministracao\bin\Debug\DomainModel.dll
+C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\ClienteAdministracao\bin\Debug\AcupunturaExcel.pdb
+C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\ClienteAdministracao\bin\Debug\DomainModel.pdb
+C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.csprojResolveAssemblyReference.cache
+C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.FormLogin.resources
+C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.FormMain.resources
+C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.FormDataManagment.resources
+C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.FormHumanRes.resources
+C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.Properties.Resources.resources
+C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.csproj.GenerateResource.Cache
+C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.FormAdicionarHR.resources
+C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.FormEditarHR.resources
+C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.FormRemoverHR.resources
