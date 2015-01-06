@@ -131,18 +131,46 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="getAllDiagnosticosXml">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllDiagnosticosXmlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="getAllDiagnosticosXmlResult" nillable="true" type="q6:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="getListaDiagnosticosXml">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/AcupunturaWebService" minOccurs="0" name="listaSintomasWeb" nillable="true" type="q6:ArrayOfSintomaWEB" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/AcupunturaWebService" minOccurs="0" name="listaSintomasWeb" nillable="true" type="q7:ArrayOfSintomaWEB" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="getListaDiagnosticosXmlResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="getListaDiagnosticosXmlResult" nillable="true" type="q7:ArrayOfstring" />
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="getListaDiagnosticosXmlResult" nillable="true" type="q8:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="validaXml">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="validaXmlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="validaXmlResult" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

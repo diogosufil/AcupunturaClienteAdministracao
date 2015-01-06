@@ -62,21 +62,9 @@ namespace ClienteAdministracao
                 if (!txtAbrirExcel.Text.Equals(""))
                 {
                     labelProgress.Show();
+
                     listaSintomas = ExcelHandler.readSintomasFromExcel(openExcel.FileName);
                     listaDiagnosticos = ExcelHandler.readDiagnosticosFromExcel(openExcel.FileName);
-                    String leituraSintomas = "";
-                    String leituraDiagnosticos = "";
-
-                    foreach (Sintoma s in listaSintomas)
-                    {
-                        leituraSintomas += s.getNome + Environment.NewLine;
-                    }
-                    foreach (DomainModel.Diagnostico d in listaDiagnosticos)
-                    {
-                        leituraDiagnosticos += d.getNome + " -> " + d.getDescricao + Environment.NewLine;
-                    }
-                    richTextBoxSintomas.Text = leituraSintomas;
-                    richTextBoxDiagnosticos.Text = leituraDiagnosticos;
 
                     labelProgress.Text = "*Not imported";
                     buttonImportData.Enabled = true;
@@ -147,25 +135,51 @@ namespace ClienteAdministracao
             }
         }
 
-        private void buttonGetSintomasXML_Click(object sender, EventArgs e)
+        private void buttonGetDataXML_Click(object sender, EventArgs e)
         {
-            //Teste para verificar se gerou xml no web service e se vai "buscar" a lista de sintomas ao xml
+            //Get dados (lista sintomas e lista diagnosticos) do xml
             string token = ClienteAdministracao.Properties.Settings.Default.token;
             try
             {
-                SintomaWEB[] listaSintomas = servico.getListaSintomasXml(token);
-                //List<SintomaWEB> lista = listaSintomas.ToList();
-                String listaS = "";
-                foreach (SintomaWEB sweb in listaSintomas)
+
+                SintomaWEB[] listaSint = servico.getListaSintomasXml(token);
+                String[] listaDiag = servico.getAllDiagnosticosXml(token);
+
+                String leituraSintomas = "";
+                String leituraDiagnosticos = "";
+
+                foreach (SintomaWEB sweb in listaSint)
                 {
-                    listaS += sweb.nome + "\n";
+                    leituraSintomas += sweb.nome + "\n";
                 }
-                MessageBox.Show(listaS);
+                foreach (String dweb in listaDiag)
+                {
+                    leituraDiagnosticos += dweb + "\n";
+                }
+
+                richTextBoxSintomas.Text = leituraSintomas;
+                richTextBoxDiagnosticos.Text = leituraDiagnosticos;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error!\n" + ex.Message);
             }
+        }
+
+        private void buttonValidateXml_Click(object sender, EventArgs e)
+        {
+            //Validar o xml de acordo com o schema
+            string token = ClienteAdministracao.Properties.Settings.Default.token;
+            try
+            {
+                String resultado = servico.validaXml(token);
+                MessageBox.Show(resultado);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error!\n" + ex.Message);
+            }
+
         }
     }
 }

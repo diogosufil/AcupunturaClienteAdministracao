@@ -39,7 +39,8 @@
             this.richTextBoxDiagnosticos = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.buttonGetSintomasXML = new System.Windows.Forms.Button();
+            this.buttonGetDataXML = new System.Windows.Forms.Button();
+            this.buttonValidateXml = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtAbrirExcel
@@ -87,7 +88,7 @@
             this.labelProgress.AutoSize = true;
             this.labelProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelProgress.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.labelProgress.Location = new System.Drawing.Point(271, 422);
+            this.labelProgress.Location = new System.Drawing.Point(12, 421);
             this.labelProgress.Name = "labelProgress";
             this.labelProgress.Size = new System.Drawing.Size(125, 20);
             this.labelProgress.TabIndex = 23;
@@ -107,15 +108,15 @@
             // 
             this.richTextBoxSintomas.Location = new System.Drawing.Point(13, 72);
             this.richTextBoxSintomas.Name = "richTextBoxSintomas";
-            this.richTextBoxSintomas.Size = new System.Drawing.Size(263, 337);
+            this.richTextBoxSintomas.Size = new System.Drawing.Size(342, 337);
             this.richTextBoxSintomas.TabIndex = 25;
             this.richTextBoxSintomas.Text = "";
             // 
             // richTextBoxDiagnosticos
             // 
-            this.richTextBoxDiagnosticos.Location = new System.Drawing.Point(298, 72);
+            this.richTextBoxDiagnosticos.Location = new System.Drawing.Point(364, 72);
             this.richTextBoxDiagnosticos.Name = "richTextBoxDiagnosticos";
-            this.richTextBoxDiagnosticos.Size = new System.Drawing.Size(425, 337);
+            this.richTextBoxDiagnosticos.Size = new System.Drawing.Size(359, 337);
             this.richTextBoxDiagnosticos.TabIndex = 26;
             this.richTextBoxDiagnosticos.Text = "";
             // 
@@ -131,28 +132,39 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(295, 52);
+            this.label3.Location = new System.Drawing.Point(361, 52);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 17);
             this.label3.TabIndex = 28;
             this.label3.Text = "Diagnoses List";
             // 
-            // buttonGetSintomasXML
+            // buttonGetDataXML
             // 
-            this.buttonGetSintomasXML.Location = new System.Drawing.Point(608, 416);
-            this.buttonGetSintomasXML.Name = "buttonGetSintomasXML";
-            this.buttonGetSintomasXML.Size = new System.Drawing.Size(114, 44);
-            this.buttonGetSintomasXML.TabIndex = 29;
-            this.buttonGetSintomasXML.Text = "Get Symptoms List From XML";
-            this.buttonGetSintomasXML.UseVisualStyleBackColor = true;
-            this.buttonGetSintomasXML.Click += new System.EventHandler(this.buttonGetSintomasXML_Click);
+            this.buttonGetDataXML.Location = new System.Drawing.Point(363, 421);
+            this.buttonGetDataXML.Name = "buttonGetDataXML";
+            this.buttonGetDataXML.Size = new System.Drawing.Size(171, 31);
+            this.buttonGetDataXML.TabIndex = 29;
+            this.buttonGetDataXML.Text = "Get Data From XML";
+            this.buttonGetDataXML.UseVisualStyleBackColor = true;
+            this.buttonGetDataXML.Click += new System.EventHandler(this.buttonGetDataXML_Click);
+            // 
+            // buttonValidateXml
+            // 
+            this.buttonValidateXml.Location = new System.Drawing.Point(579, 421);
+            this.buttonValidateXml.Name = "buttonValidateXml";
+            this.buttonValidateXml.Size = new System.Drawing.Size(144, 31);
+            this.buttonValidateXml.TabIndex = 30;
+            this.buttonValidateXml.Text = "Validate Xml";
+            this.buttonValidateXml.UseVisualStyleBackColor = true;
+            this.buttonValidateXml.Click += new System.EventHandler(this.buttonValidateXml_Click);
             // 
             // FormDataManagment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 472);
-            this.Controls.Add(this.buttonGetSintomasXML);
+            this.ClientSize = new System.Drawing.Size(746, 472);
+            this.Controls.Add(this.buttonValidateXml);
+            this.Controls.Add(this.buttonGetDataXML);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.richTextBoxDiagnosticos);
@@ -185,6 +197,7 @@
         private System.Windows.Forms.RichTextBox richTextBoxDiagnosticos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button buttonGetSintomasXML;
+        private System.Windows.Forms.Button buttonGetDataXML;
+        private System.Windows.Forms.Button buttonValidateXml;
     }
 }

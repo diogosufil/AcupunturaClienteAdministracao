@@ -411,11 +411,23 @@ namespace ClienteAdministracao.ServiceReferenceAcupuntura {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getListaSintomasXml", ReplyAction="http://tempuri.org/IService1/getListaSintomasXmlResponse")]
         System.Threading.Tasks.Task<ClienteAdministracao.ServiceReferenceAcupuntura.SintomaWEB[]> getListaSintomasXmlAsync(string token);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getAllDiagnosticosXml", ReplyAction="http://tempuri.org/IService1/getAllDiagnosticosXmlResponse")]
+        string[] getAllDiagnosticosXml(string token);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getAllDiagnosticosXml", ReplyAction="http://tempuri.org/IService1/getAllDiagnosticosXmlResponse")]
+        System.Threading.Tasks.Task<string[]> getAllDiagnosticosXmlAsync(string token);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getListaDiagnosticosXml", ReplyAction="http://tempuri.org/IService1/getListaDiagnosticosXmlResponse")]
         string[] getListaDiagnosticosXml(string token, ClienteAdministracao.ServiceReferenceAcupuntura.SintomaWEB[] listaSintomasWeb);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getListaDiagnosticosXml", ReplyAction="http://tempuri.org/IService1/getListaDiagnosticosXmlResponse")]
         System.Threading.Tasks.Task<string[]> getListaDiagnosticosXmlAsync(string token, ClienteAdministracao.ServiceReferenceAcupuntura.SintomaWEB[] listaSintomasWeb);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/validaXml", ReplyAction="http://tempuri.org/IService1/validaXmlResponse")]
+        string validaXml(string token);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/validaXml", ReplyAction="http://tempuri.org/IService1/validaXmlResponse")]
+        System.Threading.Tasks.Task<string> validaXmlAsync(string token);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -517,12 +529,28 @@ namespace ClienteAdministracao.ServiceReferenceAcupuntura {
             return base.Channel.getListaSintomasXmlAsync(token);
         }
         
+        public string[] getAllDiagnosticosXml(string token) {
+            return base.Channel.getAllDiagnosticosXml(token);
+        }
+        
+        public System.Threading.Tasks.Task<string[]> getAllDiagnosticosXmlAsync(string token) {
+            return base.Channel.getAllDiagnosticosXmlAsync(token);
+        }
+        
         public string[] getListaDiagnosticosXml(string token, ClienteAdministracao.ServiceReferenceAcupuntura.SintomaWEB[] listaSintomasWeb) {
             return base.Channel.getListaDiagnosticosXml(token, listaSintomasWeb);
         }
         
         public System.Threading.Tasks.Task<string[]> getListaDiagnosticosXmlAsync(string token, ClienteAdministracao.ServiceReferenceAcupuntura.SintomaWEB[] listaSintomasWeb) {
             return base.Channel.getListaDiagnosticosXmlAsync(token, listaSintomasWeb);
+        }
+        
+        public string validaXml(string token) {
+            return base.Channel.validaXml(token);
+        }
+        
+        public System.Threading.Tasks.Task<string> validaXmlAsync(string token) {
+            return base.Channel.validaXmlAsync(token);
         }
     }
 }

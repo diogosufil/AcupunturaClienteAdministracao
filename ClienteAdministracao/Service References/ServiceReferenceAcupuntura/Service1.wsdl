@@ -62,11 +62,23 @@
   <wsdl:message name="IService1_getListaSintomasXml_OutputMessage">
     <wsdl:part name="parameters" element="tns:getListaSintomasXmlResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_getAllDiagnosticosXml_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllDiagnosticosXml" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllDiagnosticosXml_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllDiagnosticosXmlResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_getListaDiagnosticosXml_InputMessage">
     <wsdl:part name="parameters" element="tns:getListaDiagnosticosXml" />
   </wsdl:message>
   <wsdl:message name="IService1_getListaDiagnosticosXml_OutputMessage">
     <wsdl:part name="parameters" element="tns:getListaDiagnosticosXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_validaXml_InputMessage">
+    <wsdl:part name="parameters" element="tns:validaXml" />
+  </wsdl:message>
+  <wsdl:message name="IService1_validaXml_OutputMessage">
+    <wsdl:part name="parameters" element="tns:validaXmlResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="logIn">
@@ -105,9 +117,17 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/getListaSintomasXml" message="tns:IService1_getListaSintomasXml_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/getListaSintomasXmlResponse" message="tns:IService1_getListaSintomasXml_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="getAllDiagnosticosXml">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getAllDiagnosticosXml" message="tns:IService1_getAllDiagnosticosXml_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getAllDiagnosticosXmlResponse" message="tns:IService1_getAllDiagnosticosXml_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="getListaDiagnosticosXml">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/getListaDiagnosticosXml" message="tns:IService1_getListaDiagnosticosXml_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/getListaDiagnosticosXmlResponse" message="tns:IService1_getListaDiagnosticosXml_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="validaXml">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/validaXml" message="tns:IService1_validaXml_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/validaXmlResponse" message="tns:IService1_validaXml_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -193,8 +213,26 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="getAllDiagnosticosXml">
+      <soap:operation soapAction="http://tempuri.org/IService1/getAllDiagnosticosXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="getListaDiagnosticosXml">
       <soap:operation soapAction="http://tempuri.org/IService1/getListaDiagnosticosXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validaXml">
+      <soap:operation soapAction="http://tempuri.org/IService1/validaXml" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -53,3 +53,6 @@ C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\ClienteAdminist
 C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.FormAdicionarHR.resources
 C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.FormEditarHR.resources
 C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.FormRemoverHR.resources
+E:\Diogo\Faculdade\I.S\_Projeto\Etapa 2\Source Control\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.FormAdicionarHR.resources
+E:\Diogo\Faculdade\I.S\_Projeto\Etapa 2\Source Control\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.FormEditarHR.resources
+E:\Diogo\Faculdade\I.S\_Projeto\Etapa 2\Source Control\AcupunturaClienteAdministracao\ClienteAdministracao\obj\Debug\ClienteAdministracao.FormRemoverHR.resources
