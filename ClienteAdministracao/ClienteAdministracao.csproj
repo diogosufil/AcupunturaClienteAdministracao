@@ -134,6 +134,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Service References\ServiceReferenceAcupuntura\ClienteAdministracao.ServiceReferenceAcupuntura.PacienteWEB.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceAcupuntura\ClienteAdministracao.ServiceReferenceAcupuntura.SintomaWEB.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\ServiceReferenceAcupuntura\ClienteAdministracao.ServiceReferenceAcupuntura.UtilizadorWEB.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -145,6 +151,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServiceReferenceAcupuntura\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceAcupuntura\Service13.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

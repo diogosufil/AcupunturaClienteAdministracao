@@ -15,4 +15,41 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="UtilizadorWEB" nillable="true" type="tns:UtilizadorWEB" />
+  <xs:complexType name="ArrayOfSintomaWEB">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SintomaWEB" nillable="true" type="tns:SintomaWEB" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSintomaWEB" nillable="true" type="tns:ArrayOfSintomaWEB" />
+  <xs:complexType name="SintomaWEB">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SintomaWEB" nillable="true" type="tns:SintomaWEB" />
+  <xs:complexType name="ArrayOfDiagnosticoWEB">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DiagnosticoWEB" nillable="true" type="tns:DiagnosticoWEB" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDiagnosticoWEB" nillable="true" type="tns:ArrayOfDiagnosticoWEB" />
+  <xs:complexType name="DiagnosticoWEB">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="listaSintomas" nillable="true" type="tns:ArrayOfSintomaWEB" />
+      <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="orgao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tratamento" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DiagnosticoWEB" nillable="true" type="tns:DiagnosticoWEB" />
+  <xs:complexType name="PacienteWEB">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bi" type="xs:int" />
+      <xs:element minOccurs="0" name="dataNascimento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PacienteWEB" nillable="true" type="tns:PacienteWEB" />
 </xs:schema>

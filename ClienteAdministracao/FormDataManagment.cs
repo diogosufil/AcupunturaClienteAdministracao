@@ -18,6 +18,8 @@ namespace ClienteAdministracao
     {
         OpenFileDialog openExcel = new OpenFileDialog();
         ServiceReferenceAcupuntura.Service1Client servico;
+        List<DomainModel.Sintoma> listaSintomas = new List<DomainModel.Sintoma>();
+        List<DomainModel.Diagnostico> listaDiagnosticos = new List<DomainModel.Diagnostico>();
 
         public FormDataManagment()
         {
@@ -60,8 +62,8 @@ namespace ClienteAdministracao
                 if (!txtAbrirExcel.Text.Equals(""))
                 {
                     labelProgress.Show();
-                    List<Sintoma> listaSintomas = ExcelHandler.readSintomasFromExcel(openExcel.FileName);
-                    List<Diagnostico> listaDiagnosticos = ExcelHandler.readDiagnosticosFromExcel(openExcel.FileName);
+                    listaSintomas = ExcelHandler.readSintomasFromExcel(openExcel.FileName);
+                    listaDiagnosticos = ExcelHandler.readDiagnosticosFromExcel(openExcel.FileName);
                     String leituraSintomas = "";
                     String leituraDiagnosticos = "";
 
@@ -69,7 +71,7 @@ namespace ClienteAdministracao
                     {
                         leituraSintomas += s.getNome + Environment.NewLine;
                     }
-                    foreach (Diagnostico d in listaDiagnosticos)
+                    foreach (DomainModel.Diagnostico d in listaDiagnosticos)
                     {
                         leituraDiagnosticos += d.getNome + " -> " + d.getDescricao + Environment.NewLine;
                     }
@@ -94,20 +96,75 @@ namespace ClienteAdministracao
         private void buttonImportData_Click(object sender, EventArgs e)
         {
             //Importar para o web service e gerar o Xml:
-
-            labelProgress.Text = "Importing Data\nPlease Wait...";
             try
             {
+                labelProgress.Text = "Importing Data\nPlease Wait...";
                 Cursor.Current = Cursors.WaitCursor;
+                string token = ClienteAdministracao.Properties.Settings.Default.token;
 
-                //servico.writeToXmlFile(listaSintomas, listaDiagnosticos);
+                List<SintomaWEB> listaS = new List<SintomaWEB>();
+                List<DiagnosticoWEB> listaD = new List<DiagnosticoWEB>();
 
-                labelProgress.Text = Path.GetFileName(openExcel.FileName) + " Imported!";
-                MessageBox.Show("Data successfully imported!\nXML file successfully generated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                foreach (DomainModel.Sintoma s in listaSintomas)
+                {
+                    SintomaWEB sin = new SintomaWEB();
+                    sin.nome = s.getNome;
+                    listaS.Add(sin);
+                }
+
+                foreach (DomainModel.Diagnostico d in listaDiagnosticos)
+                {
+                    DiagnosticoWEB diag = new DiagnosticoWEB();
+                    diag.orgao = d.getOrgao;
+                    diag.descricao = d.getDescricao;
+                    diag.nome = d.getNome;
+                    diag.tratamento = d.getTratamento;
+                    List<SintomaWEB> listaSintWeb = new List<SintomaWEB>();
+                    foreach (DomainModel.Sintoma sin in d.getListaSintomas)
+                    {
+                        SintomaWEB sint = new SintomaWEB();
+                        sint.nome = sin.getNome;
+                        listaSintWeb.Add(sint);
+                    }
+                    diag.listaSintomas = listaSintWeb.ToArray();
+                    listaD.Add(diag);
+                }
+                try
+                {
+                    labelProgress.Text = "*Not imported";
+                    servico.writeToXml(token, listaS.ToArray(), listaD.ToArray());
+                    labelProgress.Text = Path.GetFileName(openExcel.FileName) + " Imported!";
+                    MessageBox.Show("Data successfully imported!\nXML file successfully generated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occured while importing data!\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonGetSintomasXML_Click(object sender, EventArgs e)
+        {
+            //Teste para verificar se gerou xml no web service e se vai "buscar" a lista de sintomas ao xml
+            string token = ClienteAdministracao.Properties.Settings.Default.token;
+            try
+            {
+                SintomaWEB[] listaSintomas = servico.getListaSintomasXml(token);
+                //List<SintomaWEB> lista = listaSintomas.ToList();
+                String listaS = "";
+                foreach (SintomaWEB sweb in listaSintomas)
+                {
+                    listaS += sweb.nome + "\n";
+                }
+                MessageBox.Show(listaS);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error!\n" + ex.Message);
             }
         }
     }

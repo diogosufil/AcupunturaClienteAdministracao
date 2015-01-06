@@ -106,6 +106,253 @@ namespace ClienteAdministracao.ServiceReferenceAcupuntura {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SintomaWEB", Namespace="http://schemas.datacontract.org/2004/07/AcupunturaWebService")]
+    [System.SerializableAttribute()]
+    public partial class SintomaWEB : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nomeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string nome {
+            get {
+                return this.nomeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nomeField, value) != true)) {
+                    this.nomeField = value;
+                    this.RaisePropertyChanged("nome");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DiagnosticoWEB", Namespace="http://schemas.datacontract.org/2004/07/AcupunturaWebService")]
+    [System.SerializableAttribute()]
+    public partial class DiagnosticoWEB : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string descricaoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private ClienteAdministracao.ServiceReferenceAcupuntura.SintomaWEB[] listaSintomasField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nomeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string orgaoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tratamentoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string descricao {
+            get {
+                return this.descricaoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.descricaoField, value) != true)) {
+                    this.descricaoField = value;
+                    this.RaisePropertyChanged("descricao");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ClienteAdministracao.ServiceReferenceAcupuntura.SintomaWEB[] listaSintomas {
+            get {
+                return this.listaSintomasField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.listaSintomasField, value) != true)) {
+                    this.listaSintomasField = value;
+                    this.RaisePropertyChanged("listaSintomas");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string nome {
+            get {
+                return this.nomeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nomeField, value) != true)) {
+                    this.nomeField = value;
+                    this.RaisePropertyChanged("nome");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string orgao {
+            get {
+                return this.orgaoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.orgaoField, value) != true)) {
+                    this.orgaoField = value;
+                    this.RaisePropertyChanged("orgao");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tratamento {
+            get {
+                return this.tratamentoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tratamentoField, value) != true)) {
+                    this.tratamentoField = value;
+                    this.RaisePropertyChanged("tratamento");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PacienteWEB", Namespace="http://schemas.datacontract.org/2004/07/AcupunturaWebService")]
+    [System.SerializableAttribute()]
+    public partial class PacienteWEB : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int biField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime dataNascimentoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nomeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int bi {
+            get {
+                return this.biField;
+            }
+            set {
+                if ((this.biField.Equals(value) != true)) {
+                    this.biField = value;
+                    this.RaisePropertyChanged("bi");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime dataNascimento {
+            get {
+                return this.dataNascimentoField;
+            }
+            set {
+                if ((this.dataNascimentoField.Equals(value) != true)) {
+                    this.dataNascimentoField = value;
+                    this.RaisePropertyChanged("dataNascimento");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                if ((this.idField.Equals(value) != true)) {
+                    this.idField = value;
+                    this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string nome {
+            get {
+                return this.nomeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nomeField, value) != true)) {
+                    this.nomeField = value;
+                    this.RaisePropertyChanged("nome");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReferenceAcupuntura.IService1")]
     public interface IService1 {
@@ -139,6 +386,36 @@ namespace ClienteAdministracao.ServiceReferenceAcupuntura {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getAllUtilizadores", ReplyAction="http://tempuri.org/IService1/getAllUtilizadoresResponse")]
         System.Threading.Tasks.Task<ClienteAdministracao.ServiceReferenceAcupuntura.UtilizadorWEB[]> getAllUtilizadoresAsync(string token);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/writeToXml", ReplyAction="http://tempuri.org/IService1/writeToXmlResponse")]
+        void writeToXml(string token, ClienteAdministracao.ServiceReferenceAcupuntura.SintomaWEB[] listaSintomas, ClienteAdministracao.ServiceReferenceAcupuntura.DiagnosticoWEB[] listaDiagnosticos);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/writeToXml", ReplyAction="http://tempuri.org/IService1/writeToXmlResponse")]
+        System.Threading.Tasks.Task writeToXmlAsync(string token, ClienteAdministracao.ServiceReferenceAcupuntura.SintomaWEB[] listaSintomas, ClienteAdministracao.ServiceReferenceAcupuntura.DiagnosticoWEB[] listaDiagnosticos);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/adicionarPaciente", ReplyAction="http://tempuri.org/IService1/adicionarPacienteResponse")]
+        bool adicionarPaciente(string token, string nome, int bi, System.DateTime dataNascimento);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/adicionarPaciente", ReplyAction="http://tempuri.org/IService1/adicionarPacienteResponse")]
+        System.Threading.Tasks.Task<bool> adicionarPacienteAsync(string token, string nome, int bi, System.DateTime dataNascimento);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getPacientePorBi", ReplyAction="http://tempuri.org/IService1/getPacientePorBiResponse")]
+        ClienteAdministracao.ServiceReferenceAcupuntura.PacienteWEB getPacientePorBi(string token, int bi);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getPacientePorBi", ReplyAction="http://tempuri.org/IService1/getPacientePorBiResponse")]
+        System.Threading.Tasks.Task<ClienteAdministracao.ServiceReferenceAcupuntura.PacienteWEB> getPacientePorBiAsync(string token, int bi);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getListaSintomasXml", ReplyAction="http://tempuri.org/IService1/getListaSintomasXmlResponse")]
+        ClienteAdministracao.ServiceReferenceAcupuntura.SintomaWEB[] getListaSintomasXml(string token);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getListaSintomasXml", ReplyAction="http://tempuri.org/IService1/getListaSintomasXmlResponse")]
+        System.Threading.Tasks.Task<ClienteAdministracao.ServiceReferenceAcupuntura.SintomaWEB[]> getListaSintomasXmlAsync(string token);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getListaDiagnosticosXml", ReplyAction="http://tempuri.org/IService1/getListaDiagnosticosXmlResponse")]
+        string[] getListaDiagnosticosXml(string token, ClienteAdministracao.ServiceReferenceAcupuntura.SintomaWEB[] listaSintomasWeb);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getListaDiagnosticosXml", ReplyAction="http://tempuri.org/IService1/getListaDiagnosticosXmlResponse")]
+        System.Threading.Tasks.Task<string[]> getListaDiagnosticosXmlAsync(string token, ClienteAdministracao.ServiceReferenceAcupuntura.SintomaWEB[] listaSintomasWeb);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -206,6 +483,46 @@ namespace ClienteAdministracao.ServiceReferenceAcupuntura {
         
         public System.Threading.Tasks.Task<ClienteAdministracao.ServiceReferenceAcupuntura.UtilizadorWEB[]> getAllUtilizadoresAsync(string token) {
             return base.Channel.getAllUtilizadoresAsync(token);
+        }
+        
+        public void writeToXml(string token, ClienteAdministracao.ServiceReferenceAcupuntura.SintomaWEB[] listaSintomas, ClienteAdministracao.ServiceReferenceAcupuntura.DiagnosticoWEB[] listaDiagnosticos) {
+            base.Channel.writeToXml(token, listaSintomas, listaDiagnosticos);
+        }
+        
+        public System.Threading.Tasks.Task writeToXmlAsync(string token, ClienteAdministracao.ServiceReferenceAcupuntura.SintomaWEB[] listaSintomas, ClienteAdministracao.ServiceReferenceAcupuntura.DiagnosticoWEB[] listaDiagnosticos) {
+            return base.Channel.writeToXmlAsync(token, listaSintomas, listaDiagnosticos);
+        }
+        
+        public bool adicionarPaciente(string token, string nome, int bi, System.DateTime dataNascimento) {
+            return base.Channel.adicionarPaciente(token, nome, bi, dataNascimento);
+        }
+        
+        public System.Threading.Tasks.Task<bool> adicionarPacienteAsync(string token, string nome, int bi, System.DateTime dataNascimento) {
+            return base.Channel.adicionarPacienteAsync(token, nome, bi, dataNascimento);
+        }
+        
+        public ClienteAdministracao.ServiceReferenceAcupuntura.PacienteWEB getPacientePorBi(string token, int bi) {
+            return base.Channel.getPacientePorBi(token, bi);
+        }
+        
+        public System.Threading.Tasks.Task<ClienteAdministracao.ServiceReferenceAcupuntura.PacienteWEB> getPacientePorBiAsync(string token, int bi) {
+            return base.Channel.getPacientePorBiAsync(token, bi);
+        }
+        
+        public ClienteAdministracao.ServiceReferenceAcupuntura.SintomaWEB[] getListaSintomasXml(string token) {
+            return base.Channel.getListaSintomasXml(token);
+        }
+        
+        public System.Threading.Tasks.Task<ClienteAdministracao.ServiceReferenceAcupuntura.SintomaWEB[]> getListaSintomasXmlAsync(string token) {
+            return base.Channel.getListaSintomasXmlAsync(token);
+        }
+        
+        public string[] getListaDiagnosticosXml(string token, ClienteAdministracao.ServiceReferenceAcupuntura.SintomaWEB[] listaSintomasWeb) {
+            return base.Channel.getListaDiagnosticosXml(token, listaSintomasWeb);
+        }
+        
+        public System.Threading.Tasks.Task<string[]> getListaDiagnosticosXmlAsync(string token, ClienteAdministracao.ServiceReferenceAcupuntura.SintomaWEB[] listaSintomasWeb) {
+            return base.Channel.getListaDiagnosticosXmlAsync(token, listaSintomasWeb);
         }
     }
 }
