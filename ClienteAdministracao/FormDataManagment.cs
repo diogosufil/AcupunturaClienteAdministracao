@@ -96,10 +96,9 @@ namespace ClienteAdministracao
         private void buttonImportData_Click(object sender, EventArgs e)
         {
             //Importar para o web service e gerar o Xml:
-
-            labelProgress.Text = "Importing Data\nPlease Wait...";
             try
             {
+                labelProgress.Text = "Importing Data\nPlease Wait...";
                 Cursor.Current = Cursors.WaitCursor;
                 string token = ClienteAdministracao.Properties.Settings.Default.token;
 
@@ -130,15 +129,42 @@ namespace ClienteAdministracao
                     diag.listaSintomas = listaSintWeb.ToArray();
                     listaD.Add(diag);
                 }
-
-                servico.writeToXml(token, listaS.ToArray(), listaD.ToArray());
-
-                labelProgress.Text = Path.GetFileName(openExcel.FileName) + " Imported!";
-                MessageBox.Show("Data successfully imported!\nXML file successfully generated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                    labelProgress.Text = "*Not imported";
+                    servico.writeToXml(token, listaS.ToArray(), listaD.ToArray());
+                    labelProgress.Text = Path.GetFileName(openExcel.FileName) + " Imported!";
+                    MessageBox.Show("Data successfully imported!\nXML file successfully generated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occured while importing data!\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonGetSintomasXML_Click(object sender, EventArgs e)
+        {
+            //Teste para verificar se gerou xml no web service e se vai "buscar" a lista de sintomas ao xml
+            string token = ClienteAdministracao.Properties.Settings.Default.token;
+            try
+            {
+                SintomaWEB[] listaSintomas = servico.getListaSintomasXml(token);
+                //List<SintomaWEB> lista = listaSintomas.ToList();
+                String listaS = "";
+                foreach (SintomaWEB sweb in listaSintomas)
+                {
+                    listaS += sweb.nome + "\n";
+                }
+                MessageBox.Show(listaS);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error!\n" + ex.Message);
             }
         }
     }

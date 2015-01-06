@@ -5,6 +5,7 @@
       <xsd:import schemaLocation="http://acupunturawcf.apphb.com/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://acupunturawcf.apphb.com/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://acupunturawcf.apphb.com/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AcupunturaWebService" />
+      <xsd:import schemaLocation="http://acupunturawcf.apphb.com/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IService1_logIn_InputMessage">
@@ -43,6 +44,30 @@
   <wsdl:message name="IService1_writeToXml_OutputMessage">
     <wsdl:part name="parameters" element="tns:writeToXmlResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_adicionarPaciente_InputMessage">
+    <wsdl:part name="parameters" element="tns:adicionarPaciente" />
+  </wsdl:message>
+  <wsdl:message name="IService1_adicionarPaciente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:adicionarPacienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getPacientePorBi_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPacientePorBi" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getPacientePorBi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPacientePorBiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getListaSintomasXml_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListaSintomasXml" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getListaSintomasXml_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListaSintomasXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getListaDiagnosticosXml_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListaDiagnosticosXml" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getListaDiagnosticosXml_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListaDiagnosticosXmlResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="logIn">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/logIn" message="tns:IService1_logIn_InputMessage" />
@@ -67,6 +92,22 @@
     <wsdl:operation name="writeToXml">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/writeToXml" message="tns:IService1_writeToXml_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/writeToXmlResponse" message="tns:IService1_writeToXml_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="adicionarPaciente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/adicionarPaciente" message="tns:IService1_adicionarPaciente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/adicionarPacienteResponse" message="tns:IService1_adicionarPaciente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPacientePorBi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getPacientePorBi" message="tns:IService1_getPacientePorBi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getPacientePorBiResponse" message="tns:IService1_getPacientePorBi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListaSintomasXml">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getListaSintomasXml" message="tns:IService1_getListaSintomasXml_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getListaSintomasXmlResponse" message="tns:IService1_getListaSintomasXml_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListaDiagnosticosXml">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getListaDiagnosticosXml" message="tns:IService1_getListaDiagnosticosXml_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getListaDiagnosticosXmlResponse" message="tns:IService1_getListaDiagnosticosXml_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -118,6 +159,42 @@
     </wsdl:operation>
     <wsdl:operation name="writeToXml">
       <soap:operation soapAction="http://tempuri.org/IService1/writeToXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="adicionarPaciente">
+      <soap:operation soapAction="http://tempuri.org/IService1/adicionarPaciente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPacientePorBi">
+      <soap:operation soapAction="http://tempuri.org/IService1/getPacientePorBi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListaSintomasXml">
+      <soap:operation soapAction="http://tempuri.org/IService1/getListaSintomasXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListaDiagnosticosXml">
+      <soap:operation soapAction="http://tempuri.org/IService1/getListaDiagnosticosXml" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
