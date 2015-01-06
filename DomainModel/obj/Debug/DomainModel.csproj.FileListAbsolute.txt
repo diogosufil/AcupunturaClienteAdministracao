@@ -2,3 +2,8 @@ E:\Diogo\Faculdade\I.S\_Projeto\Etapa 2\Source Control\AcupunturaClienteAdminist
 E:\Diogo\Faculdade\I.S\_Projeto\Etapa 2\Source Control\AcupunturaClienteAdministracao\DomainModel\bin\Debug\DomainModel.pdb
 E:\Diogo\Faculdade\I.S\_Projeto\Etapa 2\Source Control\AcupunturaClienteAdministracao\DomainModel\obj\Debug\DomainModel.dll
 E:\Diogo\Faculdade\I.S\_Projeto\Etapa 2\Source Control\AcupunturaClienteAdministracao\DomainModel\obj\Debug\DomainModel.pdb
+C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\DomainModel\bin\Debug\DomainModel.dll
+C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\DomainModel\bin\Debug\DomainModel.pdb
+C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\DomainModel\obj\Debug\DomainModel.csprojResolveAssemblyReference.cache
+C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\DomainModel\obj\Debug\DomainModel.dll
+C:\Users\Ines\Documents\ProjetoIS\AcupunturaClienteAdministracao\DomainModel\obj\Debug\DomainModel.pdb

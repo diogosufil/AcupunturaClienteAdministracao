@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAdicionarHR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdicionarHR.Designer.cs">
+      <DependentUpon>FormAdicionarHR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditarHR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditarHR.Designer.cs">
+      <DependentUpon>FormEditarHR.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +82,12 @@
     <Compile Include="FormHumanRes.Designer.cs">
       <DependentUpon>FormHumanRes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRemoverHR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRemoverHR.Designer.cs">
+      <DependentUpon>FormRemoverHR.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\ServiceReferenceAcupuntura\Reference.cs">
@@ -77,6 +95,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormAdicionarHR.resx">
+      <DependentUpon>FormAdicionarHR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditarHR.resx">
+      <DependentUpon>FormEditarHR.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormHumanRes.resx">
       <DependentUpon>FormHumanRes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRemoverHR.resx">
+      <DependentUpon>FormRemoverHR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -12,9 +12,28 @@ namespace ClienteAdministracao
 {
     public partial class FormHumanRes : Form
     {
+        FormAdicionarHR adicionar = new FormAdicionarHR();
+        FormEditarHR editar = new FormEditarHR();
+        FormRemoverHR remover = new FormRemoverHR();
+
         public FormHumanRes()
         {
             InitializeComponent();
+        }
+
+        private void btnAdicionar_Click(object sender, EventArgs e)
+        {
+            adicionar.Show();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            editar.Show();
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+            remover.Show();
         }
     }
 }
