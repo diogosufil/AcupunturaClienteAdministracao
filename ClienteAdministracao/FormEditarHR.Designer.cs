@@ -34,11 +34,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.groupBoxPaciente = new System.Windows.Forms.GroupBox();
-            this.richTextBoxHistorico = new System.Windows.Forms.RichTextBox();
-            this.comboBoxAssociarTerapeuta = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.groupBoxDadosPessoais = new System.Windows.Forms.GroupBox();
             this.dateTimeDataNascim = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,32 +46,35 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.groupBoxPaciente.SuspendLayout();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBoxEscolherTipo = new System.Windows.Forms.ComboBox();
             this.groupBoxDadosPessoais.SuspendLayout();
             this.groupBoxAutenticacao.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(492, 371);
+            this.btnCancelar.Location = new System.Drawing.Point(495, 290);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 36;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnPesquisarBI
             // 
-            this.btnPesquisarBI.Location = new System.Drawing.Point(255, 17);
+            this.btnPesquisarBI.Location = new System.Drawing.Point(404, 14);
             this.btnPesquisarBI.Name = "btnPesquisarBI";
             this.btnPesquisarBI.Size = new System.Drawing.Size(75, 23);
             this.btnPesquisarBI.TabIndex = 35;
             this.btnPesquisarBI.Text = "Pesquisar";
             this.btnPesquisarBI.UseVisualStyleBackColor = true;
+            this.btnPesquisarBI.Click += new System.EventHandler(this.btnPesquisarBI_Click);
             // 
             // txtPesquisarBI
             // 
-            this.txtPesquisarBI.Location = new System.Drawing.Point(121, 19);
+            this.txtPesquisarBI.Location = new System.Drawing.Point(270, 16);
             this.txtPesquisarBI.Name = "txtPesquisarBI";
             this.txtPesquisarBI.Size = new System.Drawing.Size(108, 20);
             this.txtPesquisarBI.TabIndex = 34;
@@ -86,78 +84,29 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(22, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 28;
-            this.label1.Text = "Pesquisar por BI:";
+            this.label1.Text = "Pesquisar";
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(401, 371);
+            this.btnOK.Location = new System.Drawing.Point(404, 290);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 33;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(313, 371);
+            this.btnEditar.Location = new System.Drawing.Point(316, 290);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 32;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
-            // 
-            // groupBoxPaciente
-            // 
-            this.groupBoxPaciente.Controls.Add(this.richTextBoxHistorico);
-            this.groupBoxPaciente.Controls.Add(this.comboBoxAssociarTerapeuta);
-            this.groupBoxPaciente.Controls.Add(this.label7);
-            this.groupBoxPaciente.Controls.Add(this.label8);
-            this.groupBoxPaciente.Location = new System.Drawing.Point(259, 198);
-            this.groupBoxPaciente.Name = "groupBoxPaciente";
-            this.groupBoxPaciente.Size = new System.Drawing.Size(316, 167);
-            this.groupBoxPaciente.TabIndex = 31;
-            this.groupBoxPaciente.TabStop = false;
-            this.groupBoxPaciente.Text = "Paciente";
-            // 
-            // richTextBoxHistorico
-            // 
-            this.richTextBoxHistorico.Location = new System.Drawing.Point(77, 52);
-            this.richTextBoxHistorico.Name = "richTextBoxHistorico";
-            this.richTextBoxHistorico.Size = new System.Drawing.Size(216, 108);
-            this.richTextBoxHistorico.TabIndex = 10;
-            this.richTextBoxHistorico.Text = "";
-            // 
-            // comboBoxAssociarTerapeuta
-            // 
-            this.comboBoxAssociarTerapeuta.FormattingEnabled = true;
-            this.comboBoxAssociarTerapeuta.Items.AddRange(new object[] {
-            "Administrador",
-            "Terapeuta",
-            "Paciente"});
-            this.comboBoxAssociarTerapeuta.Location = new System.Drawing.Point(126, 25);
-            this.comboBoxAssociarTerapeuta.Name = "comboBoxAssociarTerapeuta";
-            this.comboBoxAssociarTerapeuta.Size = new System.Drawing.Size(167, 21);
-            this.comboBoxAssociarTerapeuta.TabIndex = 8;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 29);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Associar Terapeuta:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(20, 65);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 13);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Historico:";
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // groupBoxDadosPessoais
             // 
@@ -176,10 +125,11 @@
             // 
             // dateTimeDataNascim
             // 
-            this.dateTimeDataNascim.Location = new System.Drawing.Point(272, 68);
+            this.dateTimeDataNascim.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimeDataNascim.Location = new System.Drawing.Point(274, 68);
             this.dateTimeDataNascim.Name = "dateTimeDataNascim";
-            this.dateTimeDataNascim.Size = new System.Drawing.Size(200, 20);
-            this.dateTimeDataNascim.TabIndex = 7;
+            this.dateTimeDataNascim.Size = new System.Drawing.Size(99, 20);
+            this.dateTimeDataNascim.TabIndex = 34;
             // 
             // label2
             // 
@@ -267,24 +217,45 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Password:";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(209, 19);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(38, 13);
+            this.label9.TabIndex = 37;
+            this.label9.Text = "por BI:";
+            // 
+            // comboBoxEscolherTipo
+            // 
+            this.comboBoxEscolherTipo.FormattingEnabled = true;
+            this.comboBoxEscolherTipo.Items.AddRange(new object[] {
+            "Terapeuta",
+            "Paciente"});
+            this.comboBoxEscolherTipo.Location = new System.Drawing.Point(81, 15);
+            this.comboBoxEscolherTipo.Name = "comboBoxEscolherTipo";
+            this.comboBoxEscolherTipo.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxEscolherTipo.TabIndex = 38;
+            this.comboBoxEscolherTipo.Text = "Escolher tipo ";
+            // 
             // FormEditarHR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(586, 402);
+            this.ClientSize = new System.Drawing.Size(586, 327);
+            this.Controls.Add(this.comboBoxEscolherTipo);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnPesquisarBI);
             this.Controls.Add(this.txtPesquisarBI);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.groupBoxPaciente);
             this.Controls.Add(this.groupBoxDadosPessoais);
             this.Controls.Add(this.groupBoxAutenticacao);
             this.Name = "FormEditarHR";
             this.Text = "FormEditarHR";
-            this.groupBoxPaciente.ResumeLayout(false);
-            this.groupBoxPaciente.PerformLayout();
+            this.Load += new System.EventHandler(this.FormEditarHR_Load);
             this.groupBoxDadosPessoais.ResumeLayout(false);
             this.groupBoxDadosPessoais.PerformLayout();
             this.groupBoxAutenticacao.ResumeLayout(false);
@@ -302,13 +273,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.GroupBox groupBoxPaciente;
-        private System.Windows.Forms.RichTextBox richTextBoxHistorico;
-        private System.Windows.Forms.ComboBox comboBoxAssociarTerapeuta;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBoxDadosPessoais;
-        private System.Windows.Forms.DateTimePicker dateTimeDataNascim;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBI;
         private System.Windows.Forms.Label label3;
@@ -319,5 +284,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBoxEscolherTipo;
+        private System.Windows.Forms.DateTimePicker dateTimeDataNascim;
     }
 }

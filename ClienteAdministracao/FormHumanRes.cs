@@ -23,17 +23,17 @@ namespace ClienteAdministracao
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-            adicionar.Show();
+            adicionar.ShowDialog();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            editar.Show();
+            editar.ShowDialog();
         }
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
-            remover.Show();
+            remover.ShowDialog();
         }
     }
 }

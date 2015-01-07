@@ -31,7 +31,7 @@ namespace ClienteAdministracao
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             FormLogin f = new FormLogin();
-            f.Show();
+            f.ShowDialog();
         }
 
         private void buttonLogout_Click(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace ClienteAdministracao
                 servico.logOut(token);
                 this.Close();
                 FormLogin f = new FormLogin();
-                f.Show();
+                f.ShowDialog();
             }
             catch (Exception ex)
             {
@@ -55,7 +55,7 @@ namespace ClienteAdministracao
             //Gestão de dados (Excel):
 
             FormDataManagment fdm = new FormDataManagment();
-            fdm.Show();
+            fdm.ShowDialog();
         }
 
         private void buttonHumanResources_Click(object sender, EventArgs e)
@@ -63,7 +63,12 @@ namespace ClienteAdministracao
             //Gestão de Recursos Humanos:
 
             FormHumanRes fhr = new FormHumanRes();
-            fhr.Show();
+            fhr.ShowDialog();
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

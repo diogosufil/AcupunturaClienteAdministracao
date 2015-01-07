@@ -140,6 +140,9 @@
     <None Include="Service References\ServiceReferenceAcupuntura\ClienteAdministracao.ServiceReferenceAcupuntura.SintomaWEB.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\ServiceReferenceAcupuntura\ClienteAdministracao.ServiceReferenceAcupuntura.TerapeutaWEB.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\ServiceReferenceAcupuntura\ClienteAdministracao.ServiceReferenceAcupuntura.UtilizadorWEB.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
